@@ -2,18 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Housing } from '../lokasi-perumahan/housing.model';
-<<<<<<< HEAD
 import { HOUSING_DATA } from '../data/housing-data';  // ← Import shared data
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-=======
-import { HOUSING_DATA } from '../data/housing-data';
-
-@Component({
-  selector: 'app-detail',
->>>>>>> 730137b9f0578f93a75f72c84e4a6facb8d03f41
   imports: [CommonModule, RouterLink],
   templateUrl: './detail.html',
   styleUrl: './detail.css'
@@ -24,11 +17,7 @@ export class Detail implements OnInit {
   errorMessage: string = '';
   propertyId: number = 0;
 
-<<<<<<< HEAD
   // Gunakan data dari shared file
-=======
-  // Data lokal - menggunakan data dari file terpisah yang sama dengan Home Component
->>>>>>> 730137b9f0578f93a75f72c84e4a6facb8d03f41
   private housingData: Housing[] = HOUSING_DATA;
 
   constructor(

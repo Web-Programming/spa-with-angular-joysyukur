@@ -1,10 +1,5 @@
-import { Housing } from '../lokasi-perumahan/housing.model';
+import { Housing } from "../lokasi-perumahan/housing.model";
 
-/**
- * Data lokal untuk housing/properti
- * File ini berisi data dummy yang dapat digunakan di berbagai component
- * Nantinya bisa diganti dengan data dari backend API
- */
 export const HOUSING_DATA: Housing[] = [
   {
     id: 1,

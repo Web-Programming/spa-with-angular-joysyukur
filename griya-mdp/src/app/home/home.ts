@@ -2,14 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LokasiPerumahan } from '../lokasi-perumahan/lokasi-perumahan';
-<<<<<<< HEAD
-import { Housing } from '../lokasi-perumahan/lokasi-perumahan';
-import { HOUSING_DATA } from './data/housing-data';
-=======
 import { Housing } from '../lokasi-perumahan/housing.model';
 import { HousingService } from '../services/housing.service';
 import { CommonModule } from '@angular/common';
->>>>>>> 730137b9f0578f93a75f72c84e4a6facb8d03f41
 
 @Component({
   selector: 'app-home',
@@ -18,13 +13,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.css',
 })
 export class Home implements OnInit {
-<<<<<<< HEAD
-  //Array untuk data perumahan (bisa di isi dari backend nanti)
-  housingList: Housing[] = HOUSING_DATA;
-  
- filteredList: Housing[] = [];
-  selectedFilter: string = 'all';
-=======
   // Array untuk data perumahan
   housingList: Housing[] = [];
   filteredList: Housing[] = [];
@@ -181,7 +169,6 @@ export class Home implements OnInit {
   ];
 
   constructor(private housingService: HousingService) {}
->>>>>>> 730137b9f0578f93a75f72c84e4a6facb8d03f41
 
   ngOnInit() {
     this.loadHousingData();
@@ -213,12 +200,6 @@ export class Home implements OnInit {
 
   filterByType(type: string) {
     this.selectedFilter = type;
-<<<<<<< HEAD
-    if (type === 'all') {
-      this.filteredList = [...this.housingList];
-    } else {
-      this.filteredList = this.housingList.filter(h => h.type === type);
-=======
     this.currentPage = 1; // Reset ke halaman pertama saat filter berubah
     this.isLoading = true;
     this.errorMessage = '';
@@ -272,7 +253,6 @@ export class Home implements OnInit {
           }
         }
       });
->>>>>>> 730137b9f0578f93a75f72c84e4a6facb8d03f41
     }
   }
 
